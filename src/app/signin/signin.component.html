@@ -1,0 +1,55 @@
+<body>
+  <div [formGroup]="form" #usernform="ngForm">
+    <div class="form-group">
+      <br />
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        formControlName="email"
+        placeholder="Enter Email Address"
+        (keypress)="space($event)"
+      />
+      <mat-error
+        *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+        class="text-danger mt-2"
+      >
+        Email is required.
+      </mat-error>
+
+      <br />
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        formControlName="password"
+        placeholder="Enter Password"
+        (keypress)="space($event)"
+      />
+      <mat-error
+        *ngIf="form.get('password')?.invalid && form.get('password')?.touched"
+        class="text-danger mt-2"
+      >
+        Please enter password
+      </mat-error>
+      <br />
+
+      <button
+        type="signin"
+        class="btn btn-md btn-primary"
+        [disabled]="!usernform.form.valid"
+        (click)="handleClick()"
+      >
+        SIGN IN
+      </button>
+      <BR />
+      <br />
+      <p>New Customer? <a routerLink="/registration-form">Start Here</a></p>
+
+      <br />
+      <a routerLink="/forgot-password"> Forgot Password </a>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,16 @@
+.small-icon {
+    font-size: 16px; /* Adjust the size to your preference */
+  }
+  .hover-effect {
+    background-color: #a3a2a1;
+    height: 40px; /* Change the background color when hovered */
+    color: #fff; /* Change the text color when hovered */
+  }
+  .card-img-top{
+    padding-right: 4%;
+    padding-left: 4%;
+ 
+  }
+  .card{
+  box-shadow: 5px 5px 10px #888888;
+  }

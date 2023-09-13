@@ -1,0 +1,93 @@
+<body>
+  <div [formGroup]="form" #usernform="ngForm">
+    <div class="form-group">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+        placeholder="Enter Your Name"
+        (keypress)="space($event)"
+      />
+      <mat-error
+        *ngIf="form.get('name')?.invalid && form.get('name')?.touched"
+        class="text-danger mt-2"
+      >
+        Name is required.
+      </mat-error>
+      <br />
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        formControlName="email"
+        placeholder="Enter Email Address"
+        (keypress)="space($event)"
+      />
+      <mat-error
+        *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+        class="text-danger mt-2"
+      >
+        Email is required.
+      </mat-error>
+
+      <br />
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        formControlName="password"
+        placeholder="Enter Password"
+        (keypress)="space($event)"
+      />
+      <div
+        *ngIf="form.get('password')?.invalid && form.get('password')?.touched"
+        class="text-danger mt-2"
+      >
+        Password is required.
+      </div>
+      <div *ngIf="form.get('password')?.hasError('minlength')">
+        Password must be at least 6 characters long.
+      </div>
+      <br />
+
+      <label for="Password" class="form-label">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="Password"
+        formControlName="cpassword"
+        placeholder="Enter Confirm Password"
+        (keypress)="space($event)"
+      />
+      <div
+        *ngIf="form.get('cpassword')?.invalid && form.get('cpassword')?.touched"
+        class="text-danger mt-2"
+      >
+        Confirmation password is required.
+      </div>
+
+      <div *ngIf="form.hasError('passwordMismatch')" class="text-danger mt-2">
+        Passwords do not match.
+      </div>
+      <br />
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" #phoneNumberInput />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-md btn-primary"
+        [disabled]="!usernform.form.valid"
+        (click)="handleClick()"
+      >
+        Submit
+      </button>
+      <br />
+    </div>
+  </div>
+</body>

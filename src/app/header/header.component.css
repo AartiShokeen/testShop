@@ -1,0 +1,132 @@
+.nav-link {
+  color: white;
+}
+.d-flex {
+  width: 800px;
+}
+.lan {
+  color: rgb(255, 255, 255);
+}
+
+.wishlist {
+  color: red;
+}
+.cart {
+  color: rgb(0, 0, 0);
+}
+.container-fluid {
+  background: #f8a9eb;
+  height: 50px;
+  font-family: "Times New Roman", serif;
+  box-shadow: 5px 5px 10px #888888;
+  padding: 2%;
+}
+
+.body {
+  margin: 10%;
+  padding: 10%;
+  font-family: "Times New Roman", serif;
+  /* background: url("https://i.postimg.cc/ZnWtB7jg/2.jpg"); */
+  /* -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; */
+  height: 200vh;
+}
+a {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.nav-area {
+  color: black;
+  font-family: "Times New Roman", serif;
+}
+.navbar-brand:hover {
+  color: #000000;
+}
+.nav-area:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.nav-area ul {
+  list-style: none;
+  margin: 0;
+}
+.nav-area > ul > li {
+  float: left;
+  position: relative;
+}
+.nav-area ul li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 15px 20px;
+  display: block;
+}
+
+.top-nav {
+  background: rgb(108, 240, 0);
+  text-align: center;
+  width: 1290px;
+  color: #9047e8;
+  list-style: none;
+  display: inline-block;
+  padding: 0%;
+}
+.top-nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bottom-nav {
+  background: #00ff15;
+  text-align: center;
+  height: 100px;
+  padding: 2%;
+}
+
+.bottom-nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav-area ul li:hover a {
+  background: #ffffff;
+}
+.nav-area ul ul {
+  position: absolute;
+  padding: 0;
+  min-width: 160px;
+  display: none;
+  top: 100%;
+  left: 0;
+}
+.nav-area ul li:hover > ul {
+  display: block;
+}
+.nav-area ul ul li:hover a {
+  background: #262626;
+  color: #fffefe;
+}
+.nav-area ul ul li {
+  position: relative;
+}
+.nav-area ul ul ul {
+  top: 0;
+  left: 100%;
+}
+.nav-area ul ul ul li:hover a {
+  background: #34495e;
+}
+.btn {
+  border-width: 6px;
+  border-color: #000000;
+}
+.btn:hover {
+  background-color: #000000;
+  border-color: white;
+}
